@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+
+<style>  
+    .author-list {  
+        margin-top: 4rem;  
+        margin-bottom: 0.5rem;  
+        font-size: 1.4rem;
+    }  
+    .institution-list {  
+        margin-bottom: 1rem;  
+        font-size: 1.2rem;
+    }  
+    .larger-text {  
+        font-size: 1.4rem;  
+    }  
+</style>  
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" /> -->
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/css/libs.bundle.css"/>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/index.bundle.css"/>
+
+    <!-- Title -->
+    <title>RIO</title>
+
+    <!-- <link rel="icon" href="./assets/images/logo/otter_logo.ico" type="image/x-icon"> -->
+    <link rel="icon" href="./assets/images/logo/parrot_logo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+<!-- navbar -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-sticky navbar-dark">
+    <!-- <div class="container">
+        <a href="index.html" class="navbar-brand">
+            <img src="./assets/images/logo/otter_logo.png" alt="Logo"></a>
+    </div> -->
+    </div>
+</nav>
+
+
+<div class="offcanvas-wrap">
+
+    <!-- header -->
+    <section class="bg-primary inverted pt-20">
+        <div class="container foreground mt-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 text-center">
+                    <h1 class="display-1 fw-bold">
+                        RIO: A Benchmark for Reasoning Intention-Oriented Objects in Open Environments
+                    </h1>
+                    <div class="row justify-content-center g-1">
+                        <div class="col-auto">
+                            <a href="https://ReasonIO.github.io" class="btn btn-white rounded-pill">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                                Paper
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://ReasonIO.github.io" class="btn btn-outline-white rounded-pill">
+                                <i class="bi bi-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://youtu.be/8qrwSQpxoaI" class="btn btn-outline-white rounded-pill">
+                                <i class="bi bi-display"></i>
+                                Video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="author-list" align="center">
+                <!-- <a href='https://brianboli.com/' target='_blank'>Bo Li<sup>1,2</sup></a>&emsp; -->
+                <a target='_blank'>Mengxue Qu<sup>1,2</sup></a>&emsp;
+                <a target='_blank'>Yu Wu<sup>3</sup></a>&emsp;
+                <a target='_blank'>Wu Liiu<sup>4</sup></a>&emsp;
+                <a target='_blank'>Xiaodan Liang<sup>5,6</sup></a>&emsp;
+                <a target='_blank'>Jingkuan Song<sup>7</sup></a>&emsp;
+                <a target='_blank'>Yao Zhao<sup>1,2</sup></a>&emsp;
+                <a target='_blank'>Yunchao Wei<sup>1,2</sup></a>
+            </div>
+            <div class="institution-list" align="center">
+                <sup>1</sup> Institute of Information Science, Beijing Jiaotong University
+                </br>
+                <sup>2</sup> Beijing Key Laboratory of Advanced Information Science and Network Technology
+                </br>
+                <sup>3</sup> Wuhan University&emsp;
+                <sup>4</sup> JD Explore Academy&emsp;
+                <sup>5</sup> Sun Yat-sen University&emsp;
+                <sup>6</sup> MBZUAI&emsp;
+                </br>
+                <sup>7</sup> University of Electronic Science and Technology of China
+                <!-- <sup>&#x2709</sup> Corresponding Author -->
+            </div>
+            <div class="row mt-10">
+                <div class="bottom-overlap" data-aos="fade-up" data-aos-delay="100">
+                    <figure class="media media-video equal equal-16-9" data-bp='{"ytSrc": "8qrwSQpxoaI"}'>
+              <span style="background-image: url('./assets/images/rio_video_preview.png')">
+              </span>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <figure class="background" data-aos="fade-up" data-aos-delay="200">
+            <img class="position-absolute top-100 start-50 translate-middle"
+                 src="./assets/images/svg/pattern-lg-light.svg"
+                 alt="Image">
+        </figure>
+    </section>
+
+
+    <!-- features -->
+    <section class="py-15 py-xl-20">
+        <div class="container mt-15">
+            <div class="container">
+                <div class="row justify-content-center mb-6">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="fw-bold">
+                            Abstract
+                        </h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">  
+                    <p class="larger-text">  
+                        Intention-oriented object detection aims to detect desired objects based on specific intentions or requirements. For instance, when we desire to "lie down and rest", we instinctively seek out a suitable option such as a "bed" or a "sofa" that can fulfill our needs. Previous work in this area is limited either by the number of intention descriptions or by the affordance vocabulary available for intention objects. These limitations make it challenging to handle intentions in open environments effectively. To facilitate this research, we construct a comprehensive dataset called <strong>R</strong>easoning <strong>I</strong>ntention-Oriented <strong>O</strong>bjects (<strong>RIO</strong>). 
+                        <!-- High-quality instructions are essential for the zero-shot performance of large language models on interactive natural language tasks. For interactive vision-language tasks involving intricate visual scenes, a large quantity of diverse and creative instructions should be imperative to tune vision-language models (VLMs). Nevertheless, the current availability of vision-language instructions in terms of quantity, diversity, and creativity remains limited, posing challenges to the generalization of interactive VLMs. Here we present <strong>M</strong>ult<strong>I</strong>-<strong>M</strong>odal <strong>I</strong>n-<strong>C</strong>ontext <strong>I</strong>nstruction <strong>T</strong>uning (<strong>MIMIC-IT</strong>), a dataset comprising 2.8M multimodal instruction-response pairs, with 2.2M unique instructions derived from images and videos. Each pair is accompanied by multi-modal in-context information, forming conversational contexts aimed at empowering VLMs in perception, reasoning, and planning. The instruction collection process, dubbed as <strong>Syphus</strong>, is scaled using an automatic annotation pipeline that combines human expertise with GPT's capabilities. Using the MIMIC-IT dataset, we train a large VLM named <strong>Otter</strong>. Based on extensive evaluations conducted on vision-language benchmarks, it has been observed that Otter demonstrates remarkable proficiency in multi-modal perception, reasoning, and in-context learning. And it effectively aligns with the user's intentions. -->
+                        <br><br>
+                        In particular, RIO is specifically designed to incorporate diverse real-world scenarios and a wide range of object categories. It offers the following key features: 1) intention descriptions in RIO are represented as natural sentences rather than a mere word or verb phrase, making them more practical and meaningful; 2) the intention descriptions are contextually relevant to the scene, enabling a broader range of potential functionalities associated with the objects; 3) the dataset comprises a total of 40,214 images and 130,585 intention-object pairs. 
+                        <br><br>
+                        With the proposed RIO, we evaluate the ability of some existing models to reason intention-oriented objects in open environments. We hope RIO can promote deeper research in intention-oriented object detection, bridging the gap between traditional detection methods and real-world user intentions. By offering a rich dataset that emphasizes natural sentences and contextual relevance, RIO challenges models to not only detect, but also understand the broader implications of a scene. 
+                    </p>  
+                </div>                  
+            </div>
+        </div>
+
+
+        <!-- ##############################################################################################################3 -->
+
+        <div class="container mt-15">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4 text-center aos-init aos-animate" data-aos="fade-up">
+                    <i class="bi bi-chat-text fs-1 text-primary"></i>
+                    <h4 class="fs-5 mt-4">
+                        Intention Sentence
+                    </h4>
+                    <p class="text-secondary mx-2">
+                        Intention descriptions in RIO are represented as natural sentences rather than a word or phrase, making them more practical and meaningful.
+                    </p>
+                    <!--                    <a href="" class="underline">Learn More</a>-->
+                </div>
+                <div class="col-md-6 col-lg-4 text-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-images fs-1 text-primary"></i>
+                    <h4 class="fs-5 mt-4">
+                        Scene-Related
+                    </h4>
+                    <p class="text-secondary mx-2">
+                        Descriptions are contextually relevant to the scene, enabling a broader range of potential functionalities associated with the objects. 
+                    </p>
+                    <!--                    <a href="" class="underline">Learn More</a>-->
+                </div>
+                <div class="col-md-6 col-lg-4 text-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <i class="bi bi-globe2 fs-1 text-primary"></i>
+                    <h4 class="fs-5 mt-4">
+                        Open Environment
+                    </h4>
+                    <p class="text-secondary mx-2">
+                        We collect the intention descriptions of associated objects without restriction of syntax in the open environment.
+                    </p>
+                    <!--                    <a href="" class="underline">Learn More</a>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--#########################################################################################################################
+
+    <!-- <section class="py-15 py-xl-20 min-vh-75 position-relative overflow-hidden bg-black inverted">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center mb-8">
+                    <h2 class="fw-bold">
+                        MIMIC-IT Dataset
+                    </h2>
+                    <p class="text-secondary">
+                        The MIMIC-IT dataset comprises 2.8M multi-modal instructions spanning fundamental capabilities:
+                        perception, reasoning, and planning. Each instruction is accompanied by multi-modal
+                        conversational context, allowing VLMs trained on MIMIC-IT to demonstrate strong proficiency in
+                        interactive instruction following with zero-shot generalization.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-3 g-xl-5 align-items-end">
+                <img src="https://i.postimg.cc/qMcshRNS/Picture-1.png"
+                     alt="Image"
+                     class="img-fluid"
+                     data-aos="fade-up"
+                     style="background-color: white; border-radius: 7px;">
+            </div>
+        </div>
+
+        <div class="my-8"></div>
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center mb-8">
+                    <h4 class="fw-bold">
+                        Comparison between MIMIC-IT and Other Multi-Modal Instruction Datasets
+                    </h4>
+                    <p class="text-secondary">
+                        MIMIC-IT stands out with the following features: (1) The largest vision-language instruction
+                        dataset. (2) The first instruction dataset including video data. (3) Supporting multi-modal
+                        in-context scenarios. (4) Supporting eight languages including: English, Chinese, Spanish,
+                        Japanese, French, German, Korean, and Arabic. The data source of MIMIC-IT includes seven
+                        datasets: <a href="https://arxiv.org/abs/1405.0312">COCO</a>, <a
+                            href="https://arxiv.org/abs/1808.10584">SpotTheDifference (SD)</a>, <a
+                            href="http://www.scan-net.org/">ScanNetV2 (SN)</a>, <a
+                            href="https://arxiv.org/abs/1604.03968">VisualStorytelling (VST)</a>, <a
+                            href="https://cs.stanford.edu/people/ranjaykrishna/densevid/">DenseCaption/Activity caption
+                        (DC)</a>, <a href="https://tvr.cs.unc.edu/tvc.html">TVCaption (TVC)</a>, and <a
+                            href="https://ego4d-data.org/">Ego4D (E4D)</a>.
+                        lang. indicates language and vis. indicates vision.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-3 g-xl-5 align-items-end">
+                <img src="./assets/images/otter/table1.png"
+                     alt="Image"
+                     class="img-fluid"
+                     data-aos="fade-up"
+                     style="background-color: white; border-radius: 7px;">
+            </div>
+        </div>
+
+
+    </section> -->
+
+    <!-- features -->
+    <!--    <section class="bg-black mx-xl-3">-->
+    <!--        <div class="container py-15 pb-10 py-xl-20 level-3">-->
+    <!--            <div class="row">-->
+    <!--                <div class="col-lg-6 inverted">-->
+    <!--                    <h2 class="fw-bold">Get closer to your customers.</h2>-->
+    <!--                    <ul class="list-group list-group-minimal">-->
+    <!--                        <li class="list-group-item d-flex align-items-center">-->
+    <!--                            <div class="icon-box icon-box-sm bg-opaque-white rounded-circle me-2"><i-->
+    <!--                                    class="bi bi-check2 text-white"></i>-->
+    <!--                            </div>-->
+    <!--                            High-fidelity interactive design-->
+    <!--                        </li>-->
+    <!--                        <li class="list-group-item d-flex align-items-center">-->
+    <!--                            <div class="icon-box icon-box-sm bg-opaque-white rounded-circle me-2"><i-->
+    <!--                                    class="bi bi-check2 text-white"></i>-->
+    <!--                            </div>-->
+    <!--                            Immersive prototyping experience-->
+    <!--                        </li>-->
+    <!--                        <li class="list-group-item d-flex align-items-center">-->
+    <!--                            <div class="icon-box icon-box-sm bg-opaque-white rounded-circle me-2"><i-->
+    <!--                                    class="bi bi-check2 text-white"></i>-->
+    <!--                            </div>-->
+    <!--                            Outstranding component animations-->
+    <!--                        </li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="container-fluid back back-static">-->
+    <!--            <div class="row justify-content-end h-100">-->
+    <!--                <div class="col-lg-6 overflow-hidden position-relative">-->
+    <!--                    <figure class="background background-parallax"-->
+    <!--                            style="background-image: url('./assets/images/startup-2.jpg')"-->
+    <!--                            data-bottom-top="transform: translateY(0%);" data-top-bottom="transform: translateY(20%);">-->
+    <!--                    </figure>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+
+    <!-- logo -->
+    <!--    <section class="py-10 py-xl-15">-->
+    <!--        <div class="container">-->
+    <!--            <div class="carousel carousel-align text-center">-->
+    <!--                <div-->
+    <!--                        data-carousel='{"gutter": 48, "loop": false, "nav": false, "controls": false, "responsive": {"0": {"items": 2}, "768": {"items": 4}, "1200": {"items": 5}}}'>-->
+    <!--                    <div>-->
+    <!--                        <img src="./assets/images/logo/logo-1.svg" alt="Logo" class="logo">-->
+    <!--                    </div>-->
+    <!--                    <div>-->
+    <!--                        <img src="./assets/images/logo/logo-2.svg" alt="Logo" class="logo">-->
+    <!--                    </div>-->
+    <!--                    <div>-->
+    <!--                        <img src="./assets/images/logo/logo-3.svg" alt="Logo" class="logo">-->
+    <!--                    </div>-->
+    <!--                    <div>-->
+    <!--                        <img src="./assets/images/logo/logo-4.svg" alt="Logo" class="logo">-->
+    <!--                    </div>-->
+    <!--                    <div>-->
+    <!--                        <img src="./assets/images/logo/logo-5.svg" alt="Logo" class="logo">-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <!-- tabs -->
+    <!--    <section class="py-15 py-xl-20 bg-light">-->
+    <!--        <div class="container">-->
+    <!--            <div class="row mb-10">-->
+    <!--                <div class="col">-->
+    <!--                    <h2 class="fw-bold">-->
+    <!--                        Dataset Demo-->
+    <!--                    </h2>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            <div class="row g-3 g-xl-5 justify-content-between">-->
+    <!--                <div class="col-xl-4">-->
+    <!--                    <ul class="nav nav-tabs flex-xl-column" id="component-1" role="tablist">-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <button class="nav-link fs-5 active" id="component-1-1-tab" data-bs-toggle="pill"-->
+    <!--                                    data-bs-target="#component-1-1" type="button" role="tab"-->
+    <!--                                    aria-controls="component-1-1"-->
+    <!--                                    aria-selected="true">Dense Captions-->
+    <!--                            </button>-->
+    <!--                        </li>-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <button class="nav-link fs-5" id="component-1-2-tab" data-bs-toggle="pill"-->
+    <!--                                    data-bs-target="#component-1-2" type="button" role="tab"-->
+    <!--                                    aria-controls="component-1-2"-->
+    <!--                                    aria-selected="false">-->
+    <!--                                Ego4D-->
+    <!--                            </button>-->
+    <!--                        </li>-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <button class="nav-link fs-5" id="component-1-3-tab" data-bs-toggle="pill"-->
+    <!--                                    data-bs-target="#component-1-3" type="button" role="tab"-->
+    <!--                                    aria-controls="component-1-3"-->
+    <!--                                    aria-selected="false">-->
+    <!--                                hahah-->
+    <!--                            </button>-->
+    <!--                        </li>-->
+    <!--                        <li class="nav-item">-->
+    <!--                            <button class="nav-link fs-5" id="component-1-4-tab" data-bs-toggle="pill"-->
+    <!--                                    data-bs-target="#component-1-4" type="button" role="tab"-->
+    <!--                                    aria-controls="component-1-4"-->
+    <!--                                    aria-selected="false">CRM-->
+    <!--                            </button>-->
+    <!--                        </li>-->
+    <!--                    </ul>-->
+    <!--                </div>-->
+    <!--                <div class="col-xl-8">-->
+    <!--                    <div class="tab-content" id="component-1-content">-->
+    <!--                        <div class="tab-pane fade show active" id="component-1-1" role="tabpanel"-->
+    <!--                             aria-labelledby="component-1-1-tab">-->
+    <!--                            <div class="row g-3 g-xl-5">-->
+    <!--                                <div class="col-md-6" data-aos="fade-up">-->
+    <!--                                    <a href="" class="card equal-md-1-1 card-hover-border bg-white">-->
+    <!--                                        <div class="card-wrap">-->
+    <!--                                            <div class="card-header pb-0">-->
+    <!--                                                <img src="./assets/images/logo/logo-vendor-1.svg" alt="Logo"-->
+    <!--                                                     class="mb-4 w-20">-->
+    <!--                                            </div>-->
+    <!--                                            <div class="card-footer mt-auto pt-0">-->
+    <!--                                                <h4 class="card-title">Google Tag Manager</h4>-->
+    <!--                                                <p class="text-secondary">Praesentium quidem libero possimus similique-->
+    <!--                                                    corporis sequi fugit-->
+    <!--                                                    aliquid.</p>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </a>-->
+    <!--                                </div>-->
+    <!--                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">-->
+    <!--                                    <a href="" class="card equal-md-1-1 card-hover-border bg-white">-->
+    <!--                                        <div class="card-wrap">-->
+    <!--                                            <div class="card-header pb-0">-->
+    <!--                                                <img src="./assets/images/logo/logo-vendor-2.svg" alt="Logo"-->
+    <!--                                                     class="mb-4 w-20">-->
+    <!--                                            </div>-->
+    <!--                                            <div class="card-footer pt-0 mt-auto">-->
+    <!--                                                <h4 class="card-title">Google Analytics</h4>-->
+    <!--                                                <p class="text-secondary">Praesentium quidem libero possimus similique-->
+    <!--                                                    corporis sequi fugit-->
+    <!--                                                    aliquid.</p>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </a>-->
+    <!--                                </div>-->
+    <!--                                <div class="col-md-6" data-aos="fade-up">-->
+    <!--                                    <a href="" class="card equal-md-1-1 card-hover-border bg-white">-->
+    <!--                                        <div class="card-wrap">-->
+    <!--                                            <div class="card-header pb-0">-->
+    <!--                                                <img src="./assets/images/logo/logo-vendor-3.svg" alt="Logo"-->
+    <!--                                                     class="mb-4 w-20">-->
+    <!--                                            </div>-->
+    <!--                                            <div class="card-footer pt-0 mt-auto">-->
+    <!--                                                <h4 class="card-title">Shopify</h4>-->
+    <!--                                                <p class="text-secondary">Praesentium quidem libero possimus similique-->
+    <!--                                                    corporis sequi fugit-->
+    <!--                                                    aliquid.</p>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </a>-->
+    <!--                                </div>-->
+    <!--                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">-->
+    <!--                                    <a href="" class="card equal-md-1-1 card-hover-border bg-white">-->
+    <!--                                        <div class="card-wrap">-->
+    <!--                                            <div class="card-header pb-0">-->
+    <!--                                                <img src="./assets/images/logo/logo-vendor-4.svg" alt="Logo"-->
+    <!--                                                     class="mb-4 w-20">-->
+    <!--                                            </div>-->
+    <!--                                            <div class="card-footer pt-0 mt-auto">-->
+    <!--                                                <h4 class="card-title">Amazon</h4>-->
+    <!--                                                <p class="text-secondary">Praesentium quidem libero possimus similique-->
+    <!--                                                    corporis sequi fugit-->
+    <!--                                                    aliquid.</p>-->
+    <!--                                            </div>-->
+    <!--                                        </div>-->
+    <!--                                    </a>-->
+    <!--                                </div>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="tab-pane fade" id="component-1-2" role="tabpanel"-->
+    <!--                             aria-labelledby="component-1-2-tab">-->
+    <!--                            <h5>Second tab content here ..</h5>-->
+    <!--                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime excepturi amet rem! Ab-->
+    <!--                                incidunt quod-->
+    <!--                                nobis nisi quas? Magnam laudantium eveniet nostrum quaerat corporis error saepe aperiam-->
+    <!--                                accusantium-->
+    <!--                                alias cumque?</p>-->
+    <!--                        </div>-->
+    <!--                        <div class="tab-pane fade" id="component-1-3" role="tabpanel"-->
+    <!--                             aria-labelledby="component-1-3-tab">-->
+    <!--                            <h5>Third tab content here ..</h5>-->
+    <!--                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime excepturi amet rem! Ab-->
+    <!--                                incidunt quod-->
+    <!--                                nobis nisi quas? Magnam laudantium eveniet nostrum quaerat corporis error saepe aperiam-->
+    <!--                                accusantium-->
+    <!--                                alias cumque?</p>-->
+    <!--                        </div>-->
+    <!--                        <div class="tab-pane fade" id="component-1-4" role="tabpanel"-->
+    <!--                             aria-labelledby="component-1-4-tab">-->
+    <!--                            <h5>Fourth tab content here ..</h5>-->
+    <!--                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime excepturi amet rem! Ab-->
+    <!--                                incidunt quod-->
+    <!--                                nobis nisi quas? Magnam laudantium eveniet nostrum quaerat corporis error saepe aperiam-->
+    <!--                                accusantium-->
+    <!--                                alias cumque?</p>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+
+    <!-- footer -->
+    <!--    <footer class="py-15 py-xlV-20 border-top">-->
+    <!--        <div class="container">-->
+    <!--            <div class="row g-4 g-lg-5 mb-10">-->
+    <!--                <div class="row justify-content-between">-->
+    <!--                    <div class="col-md-3 text-center text-md-start">-->
+    <!--                        <a href="index.html">-->
+    <!--                            <img src="./assets/images/logo/otter.png" alt="logo" width="300" />-->
+    <!--                        </a>-->
+    <!--                    </div>-->
+    <!--                    <div class="col-md-4 col-lg-5 text-center text-md-start">-->
+    <!--                        <ul class="list-unstyled">-->
+    <!--                            <li class="mb-1">-->
+    <!--                                <a href="" class="text-reset text-primary-hover">paper</a>-->
+    <!--                            </li>-->
+    <!--                            <li class="mb-1">-->
+    <!--                                <a href="https://github.com/Luodian/Otter" class="text-reset text-primary-hover">GitHub Repo</a>-->
+    <!--                            </li>-->
+    <!--                        </ul>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--&lt;!&ndash;            <div class="row align-items-center g-1 g-lg-6 text-muted">&ndash;&gt;-->
+    <!--&lt;!&ndash;                <div class="row">&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <div class="col-md-6 col-lg-4 text-center text-md-end order-lg-3">&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <span class="small">50 Nanyang Ave, 639798, Singapore</span>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <div class="col-lg-3 order-lg-1 text-center text-md-start">&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <p class="small">Copyright © 2023</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;                </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;            </div>&ndash;&gt;-->
+    <!--        </div>-->
+    <!--    </footer>-->
+</div>
+
+
+<!-- javascript -->
+<script src="./assets/js/vendor.bundle.js"></script>
+<script src="./assets/js/index.bundle.js"></script>
+</body>
+
+</html>
